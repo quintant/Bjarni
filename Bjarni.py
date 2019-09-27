@@ -15,9 +15,11 @@ for i in range(len(tr)):
     else:
         aa[fret] = 1
 
-aa = sorted(aa.items(), key=lambda kv: kv[1])
+aa = sorted(aa.items(), key=lambda kv: kv[1], reverse=True)
 aa = collections.OrderedDict(aa)
+print(" --- most frequent words --- ")
+lel = 1
 for io in aa:
-    print(str(io) + "____" + str(aa[io]))
+    print(str(lel) + "   " + str(io) + "          " + str(aa[io]))
 
 
