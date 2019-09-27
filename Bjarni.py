@@ -17,9 +17,12 @@ for i in range(len(tr)):
 
 aa = sorted(aa.items(), key=lambda kv: kv[1], reverse=True)
 aa = collections.OrderedDict(aa)
-print(" --- most frequent words --- ")
+#print(" --- most frequent words --- ")
 lel = 1
+out = open("tidni.txt", "w+")
+out.write(" --- most frequent words --- " + '\n')
 for io in aa:
-    print(str(lel) + "   " + str(io) + "          " + str(aa[io]))
+    out.write(str(lel) + "   " + str(io) + "          " + str(aa[io])+ '\n')
+    #print(str(lel) + "   " + str(io) + "          " + str(aa[io]))
 
 
